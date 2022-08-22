@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.1.final using JasperReports Library version 6.19.1-867c00bf88cd4d784d404379d6c05e1b419e8a4c  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rel-user.jsp" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="eb5f347a-6755-4c04-8b1b-7f719ccdde65">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="senha" class="java.lang.String">
+		<fieldDescription><![CDATA[senha]]></fieldDescription>
+	</field>
+	<field name="extensaoFoto" class="java.lang.String">
+		<fieldDescription><![CDATA[extensaoFoto]]></fieldDescription>
+	</field>
+	<field name="novo" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[novo]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Long">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="dataNascimento" class="java.sql.Date">
+		<fieldDescription><![CDATA[dataNascimento]]></fieldDescription>
+	</field>
+	<field name="login" class="java.lang.String">
+		<fieldDescription><![CDATA[login]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.String">
+		<fieldDescription><![CDATA[sexo]]></fieldDescription>
+	</field>
+	<field name="fotoUser" class="java.lang.String">
+		<fieldDescription><![CDATA[fotoUser]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[email]]></fieldDescription>
+	</field>
+	<field name="perfil" class="java.lang.String">
+		<fieldDescription><![CDATA[perfil]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="88" splitType="Stretch">
+			<staticText>
+				<reportElement x="2" y="2" width="550" height="69" uuid="9c328b0e-2506-419a-8841-6af04961abfa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Book Antiqua" size="47" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Relatório JSP]]></text>
+			</staticText>
+			<image>
+				<reportElement x="2" y="14" width="78" height="60" uuid="d9dcd1dc-f733-458a-85f1-e5daf130356e"/>
+				<imageExpression><![CDATA["D:/Workin/Templates/mega-able-lite/assets/images/widget/BRAZIL.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" forecolor="#11BD1C" uuid="10c2eec1-0052-484c-8c93-8e2dd4b0ba5d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3eac2da9-1fed-44f4-9304-5603e6f50131"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="0" width="200" height="30" forecolor="#11BD1C" uuid="1b237484-0ac8-483a-9dd3-f51c5017ab6b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c5f4f13f-f7e9-4ed8-b060-41515007c432"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de Nascimento: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="172" height="20" forecolor="#11BD1C" uuid="9c78001d-a695-4ac4-914b-a0b28fe534c6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="748f5d96-aced-4e71-b003-0516013cc4de"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="178" height="20" uuid="ea119964-c33e-4486-8fc0-029047b82824">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3eac2da9-1fed-44f4-9304-5603e6f50131"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy" isBlankWhenNull="true">
+				<reportElement x="180" y="0" width="200" height="20" uuid="5c943408-34fb-47cb-adca-5fa41bc6ba17">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c5f4f13f-f7e9-4ed8-b060-41515007c432"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataNascimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="172" height="20" uuid="8f6b19b4-1377-42dc-ae31-42c4b35f0628">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="748f5d96-aced-4e71-b003-0516013cc4de"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Book Antiqua" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="30" width="552" height="1" uuid="8cd5f2a1-9f06-430e-95d6-8caf63470e2e"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
